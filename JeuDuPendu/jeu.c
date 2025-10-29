@@ -29,23 +29,23 @@ void affiche_pendu(int nombre_erreurs) {
 			break;
 		case 3:
 			printf(" O   |\n");
-			printf(" |\   |\n");
+			printf(" |\\  |\n");
 			printf("     |\n");
 			break;
 		case 4:
 			printf(" O   |\n");
-			printf("/|\   |\n");
+			printf("/|\\  |\n");
 			printf("     |\n");
 			break;
 		case 5:
 			printf(" O   |\n");
-			printf("/|\   |\n");
-			printf("  \   |\n");
+			printf("/|\\  |\n");
+			printf("  \\  |\n");
 			break;
 		case 6:
 			printf(" O   |\n");
-			printf("/|\   |\n");
-			printf("/ \   |\n");
+			printf("/|\\  |\n");
+			printf("/ \\  |\n");
 			break;
 	}
 	printf("     |\n");
