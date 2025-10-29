@@ -83,13 +83,12 @@ int main() {
 	char mot_a_trouver[6] = {'-','-','-','-','-','-'};
 	printf("Entrez un mot a 6 lettres : ");
 	for (int i = 0; i < 6; i++) {
-		scanf("%c",&mot_a_trouver[i]);
+		scanf(" %c",&mot_a_trouver[i]);
 	}
 	/*
 	Nettoyage de la fenêtre
 	*/
 	system("cls");
-	affiche_mot(mot_a_trouver);
 	char a_afficher[6] = { '_','_','_','_','_','_' };
 	char cherche;
 
@@ -99,7 +98,7 @@ int main() {
 	*/
 	while (trouve == false && nombre_erreurs < MAX_ERROR){
 		printf("Entrez un charactere a chercher : ");
-		scanf("%c", &cherche);
+		scanf(" %c", &cherche);
 		bool present = false;
 		for (int i = 0; i < 6; i++) {
 			if (cherche == mot_a_trouver[i]) {
@@ -110,7 +109,7 @@ int main() {
 				nombre_erreurs += 1;
 			}
 		}
-		
+		system("cls");
 		affiche_mot(a_afficher);
 		affiche_pendu(nombre_erreurs);
 		trouve = mot_trouve(a_afficher);
