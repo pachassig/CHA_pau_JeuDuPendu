@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="JeuDuPendu.vcxproj" />
+  <Project Path="JeuDuPendu.vcxproj" Id="4dd229d0-4c6f-4c17-9396-3073f35bf500" />
 </Solution>
