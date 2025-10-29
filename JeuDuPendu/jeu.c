@@ -6,6 +6,9 @@
 #define MAX_ERROR 6
 
 void affiche_pendu(int nombre_erreurs) {
+	/*
+	Affiche l'état actuel du pendu
+	*/
 	printf(" +---+\n");
 	printf(" |   |\n");
 	switch (nombre_erreurs) {
@@ -50,6 +53,9 @@ void affiche_pendu(int nombre_erreurs) {
 }
 
 void affiche_mot(char mot[6]) {
+	/*
+	Affiche toutes les lettres déjà trouvées
+	*/
 	for (int i = 0; i < 6; i++) {
 		printf("%c", mot[i]);
 	}
@@ -57,6 +63,9 @@ void affiche_mot(char mot[6]) {
 }
 
 bool mot_trouve(char mot[6]) {
+	/*
+	Indique si le mot complet a été trouvé
+	*/
 	for (int i = 0; i < 6; i++) {
 		if (mot[i] == '_') {
 			return false;
