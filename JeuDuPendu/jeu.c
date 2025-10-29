@@ -66,18 +66,28 @@ bool mot_trouve(char mot[6]) {
 }
 
 int main() {
+	/*
+	Initialisation du nombre d'erreurs et du mot à trouver
+	*/
 	int nombre_erreurs = 0;
 	bool trouve = false;
 	char mot_a_trouver[6] = {'-','-','-','-','-','-'};
-	printf("Entrez un mot à 6 lettres : ");
+	printf("Entrez un mot a 6 lettres : ");
 	for (int i = 0; i < 6; i++) {
 		mot_a_trouver[i] = getchar();
 	}
+	/*
+	Nettoyage de la fenêtre
+	*/
 	system("cls");
 	char a_afficher[6] = { '_','_','_','_','_','_' };
 	char cherche;
-	do {
-		printf("%d\n", nombre_erreurs);
+
+
+	/*
+	Vérification de la lettre cherchée dans le mot à trouver tant que l'on a ni gagné ni perdu
+	*/
+	while (trouve == false && nombre_erreurs < MAX_ERROR){
 		printf("Entrez un charactere a chercher : ");
 		scanf("%c", &cherche);
 		bool present = false;
@@ -86,14 +96,19 @@ int main() {
 				a_afficher[i] = cherche;
 				present = true;
 			}
-		}
-		if (present == false) {
-			nombre_erreurs += 1;
+			if (present == false && i == 5) {
+				nombre_erreurs += 1;
+			}
 		}
 		affiche_mot(a_afficher);
 		affiche_pendu(nombre_erreurs);
 		trouve = mot_trouve(a_afficher);
-	} while (trouve == false && nombre_erreurs < 6);
+	}
+
+
+	/*
+	Affichage du message de victoire ou de défaite et validation du mot de départ
+	*/
 	if (trouve == true) {
 		printf("Felicitations ! ");
 		
