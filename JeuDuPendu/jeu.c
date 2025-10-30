@@ -7,7 +7,7 @@
 
 void affiche_pendu(int nombre_erreurs) {
 	/*
-	Affiche l'état actuel du pendu
+	Affiche l'état actuel du pendu en fonction du nombre d'erreurs commises
 	*/
 	printf(" +---+\n");
 	printf(" |   |\n");
@@ -54,7 +54,7 @@ void affiche_pendu(int nombre_erreurs) {
 
 void affiche_mot(char mot[6]) {
 	/*
-	Affiche toutes les lettres déjà trouvées
+	Affiche toutes les lettres d'un mot (en l'occurence les lettres du mot que l'on a trouvé)
 	*/
 	for (int i = 0; i < 6; i++) {
 		printf("%c", mot[i]);
@@ -112,6 +112,9 @@ int main() {
 		if (present == false) {
 			nombre_erreurs += 1;
 		}
+		/*
+		Nettoyage de la fenêtre et affichage des informations mises à jour pour le joueur
+		*/
 		system("cls");
 		affiche_mot(a_afficher);
 		affiche_pendu(nombre_erreurs);
