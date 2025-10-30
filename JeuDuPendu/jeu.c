@@ -100,14 +100,17 @@ int main() {
 		printf("Entrez un charactere a chercher : ");
 		scanf(" %c", &cherche);
 		bool present = false;
+		/*
+		On vérifie la présence de la lettre à chaque position
+		*/
 		for (int i = 0; i < 6; i++) {
 			if (cherche == mot_a_trouver[i]) {
 				a_afficher[i] = cherche;
 				present = true;
 			}
-			if (present == false && i == 5) {
-				nombre_erreurs += 1;
-			}
+		}
+		if (present == false) {
+			nombre_erreurs += 1;
 		}
 		system("cls");
 		affiche_mot(a_afficher);
