@@ -90,7 +90,7 @@ int main() {
 	*/
 	system("cls");
 	char a_afficher[6] = { '_','_','_','_','_','_' };
-	char cherche;
+	char lettre_cherchee;
 
 
 	/*
@@ -98,14 +98,14 @@ int main() {
 	*/
 	while (trouve == false && nombre_erreurs < MAX_ERROR){
 		printf("Entrez un charactere a chercher : ");
-		scanf(" %c", &cherche);
+		scanf(" %c", &lettre_cherchee);
 		bool present = false;
 		/*
 		On vérifie la présence de la lettre à chaque position
 		*/
 		for (int i = 0; i < 6; i++) {
-			if (cherche == mot_a_trouver[i]) {
-				a_afficher[i] = cherche;
+			if (lettre_cherchee == mot_a_trouver[i]) {
+				a_afficher[i] = lettre_cherchee;
 				present = true;
 			}
 		}
