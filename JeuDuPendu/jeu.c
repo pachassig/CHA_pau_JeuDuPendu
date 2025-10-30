@@ -80,11 +80,9 @@ int main() {
 	*/
 	int nombre_erreurs = 0;
 	bool trouve = false;
-	char mot_a_trouver[6] = {'-','-','-','-','-','-'};
+	char mot_a_trouver[] = "";
 	printf("Entrez un mot a 6 lettres : ");
-	for (int i = 0; i < 6; i++) {
-		scanf(" %c",&mot_a_trouver[i]);
-	}
+	scanf(" %s",&mot_a_trouver);
 	/*
 	Nettoyage de la fenêtre
 	*/
